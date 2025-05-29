@@ -47,7 +47,7 @@ class Migration(migrations.Migration):
                 ('living_area', models.IntegerField(
                     db_index=True, null=True,
                     verbose_name='количество жилых кв.метров')),
-                ('has_balcony', models.NullBooleanField(
+                ('has_balcony', models.BooleanField(
                     db_index=True, verbose_name='Наличие балкона')),
                 ('active', models.BooleanField(
                     db_index=True, verbose_name='Активно-ли объявление')),
