@@ -9,6 +9,7 @@ class Flat(models.Model):
         choices=[(None, 'Не указано'), (True, 'Да'), (False, 'Нет')],
         default=None
     )
+
     created_at = models.DateTimeField(
         'Когда создано объявление',
         default=timezone.now,
