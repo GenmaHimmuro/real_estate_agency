@@ -8,7 +8,7 @@ def transfer_flats_info(apps, schema_editor):
     Owner = apps.get_model('property', 'Owner')
     owners = Owner.objects.all()
     for owner in owners.iterator():
-        owner.flats.set(Flat.objects.filter(owner=owner.owner))
+        owner.flats.set(Flat.objects.filter(owner=owner.phonenumber))
         owner.save()
 
 
